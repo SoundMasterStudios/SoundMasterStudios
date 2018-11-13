@@ -73,8 +73,8 @@
               <i class="fa fa-cogs d-lg-none d-xl-none"></i> Getting started
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="https://demos.creative-tim.com/blk-design-system/docs/1.0/getting-started/overview.html" class="dropdown-item">
-                <i class="tim-icons icon-paper"></i> Documentation
+              <a href="javascript:void(0)" onclick="scrollToUpload()" class="dropdown-item">
+                <i class="tim-icons icon-paper"></i> Upload
               </a>
               <a href="pages/thankyou.html" class="dropdown-item">
                 <i class="tim-icons icon-bullet-list-67"></i>Register Page
@@ -88,8 +88,8 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-default d-none d-lg-block" href="javascript:void(0)" onclick="scrollToDownload()">
-              <i class="tim-icons icon-cloud-upload-94"></i> Upload Files
+            <a class="nav-link btn btn-default d-none d-lg-block" href="javascript:void(0)" onclick="scrollToUpload()">
+              <i class="tim-icons icon-cloud-upload-94"></i> Send Files
             </a>
           </li>
         </ul>
@@ -1104,69 +1104,37 @@
                   <h4 class="card-title">Contact</h4>
                 </div>
                 <div class="card-body">
-                  <form class="form">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="tim-icons icon-single-02"></i>
-                        </div>
+                    <form class="form" action="https://formspree.io/info@soundmasterstudios.com" method="POST">
+                      <input type="hidden" name="_next" value="pages/thankyou.html" />
+                      <input type="hidden" name="_subject" value="New message from SoundMaster Studios web form!" />
+                      <input type="text" name="_gotcha" style="display:none" />
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <i class="tim-icons icon-single-02"></i>
+                            </div>
+                          </div>
+                        <input type="text" class="form-control" name="Name" id="InputName" placeholder="Full Name" required>
                       </div>
-                      <input type="text" class="form-control" placeholder="Full Name">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="tim-icons icon-email-85"></i>
-                        </div>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <i class="tim-icons icon-email-85"></i>
+                            </div>
+                          </div>
+                        <input type="email" class="form-control" name="Email" id="InputEmail" placeholder="Email" required>
                       </div>
-                      <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="tim-icons icon-lock-circle"></i>
-                        </div>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <i class="tim-icons icon-pencil"></i>
+                            </div>
+                          </div>
+                        <textarea class="form-control" name="InputMessage" id="InputMessage" rows="5" placeholder="Message" required></textarea>
                       </div>
-                      <input type="text" class="form-control" placeholder="Password">
-                    </div>
-                    <div class="form-check text-left">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox">
-                        <span class="form-check-sign"></span>
-                        I agree to the
-                        <a href="javascript:void(0)">terms and conditions</a>.
-                      </label>
-                    </div>
+                    <input type="submit" name="Submit" id="Submit" value="Submit" class="btn btn-info btn-round btn-lg"> 
                   </form>
                 </div>
-                <div class="card-footer">
-                  <a href="javascript:void(0)" class="btn btn-info btn-round btn-lg">Get Started</a>
-                </div>
-                <form role="form" action="http://formspree.io/your@mail.com">
-                  <input type="hidden" name="_next" value="//site.io/thanks.html" />
-                  <input type="hidden" name="_subject" value="New submission!" />
-                  <input type="text" name="_gotcha" style="display:none" />
-        
-                  <div class="form-group">
-                    <label for="InputName">Your Name</label>
-                    <input type="text" class="form-control" name="name" id="InputName" placeholder="Enter Name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="InputEmail">Your Email</label>
-        
-                    <input type="email" class="form-control" id="InputEmail" name="_replyto" placeholder="Enter Email" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="InputMessage">Message</label>
-        
-                    <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
-                  </div>
-                  <div class="form-group">
-                    <label for="InputReal">What is 4+3? (Simple Spam Checker)</label>
-                    <input type="text" class="form-control" name="InputReal" id="InputReal" required>
-                  </div>
-                  <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right"> 
-              </form>
               </div>
             </div>
           </div>
@@ -1192,12 +1160,12 @@
           </div>
         </div>
       </div>
-      <div class="section section-download" id="#download-section" data-background-color="black">
+      <div class="section section-upload" id="#upload-section" data-background-color="black">
         <img src="assets/img/path1.png" class="path">
         <div class="container">
           <div class="row justify-content-md-center">
             <div class="text-center col-md-12 col-lg-8">
-              <h2 class="title">Upload Your Files</h2>
+              <h2 class="title">Send Your Files</h2>
               <h4 class="description">To upload your audio files to SoundMaster Studios, click on the button below and follow the instructions. Do let us know if you have any questions. Thanks!</h4>
             </div>
             <div class="text-center col-md-12 col-lg-8">
@@ -1446,11 +1414,11 @@
       blackKit.initSliders();
     });
 
-    function scrollToDownload() {
+    function scrollToUpload() {
 
-      if ($('.section-download').length != 0) {
+      if ($('.section-upload').length != 0) {
         $("html, body").animate({
-          scrollTop: $('.section-download').offset().top
+          scrollTop: $('.section-upload').offset().top
         }, 1000);
       }
     }
