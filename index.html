@@ -1104,7 +1104,15 @@
                   <h4 class="card-title">Contact</h4>
                 </div>
                 <div class="card-body">
-                    <form class="form" action="https://formspree.io/info@soundmasterstudios.com" method="POST">
+                  <script>
+                      var mailAdd1 = "soundmaster";
+                      var mailAdd2 = "studios.";
+                      var mailAdd3 = "com";
+                      var mailAdd4 = "@";
+                      var mailAdd5 = "info";
+                      var fullAdd = mailAdd5 + mailAdd4 + mailAdd1 + mailAdd2 + mailAdd3;
+                      document.write('<form action="https://formspree.io/' + fullAdd + '" method="POST">');
+                    </script> 
                       <input type="hidden" name="_next" value="../pages/thankyou.html" />
                       <input type="hidden" name="_subject" value="New message from SoundMaster Studios web form!" />
                       <input type="text" name="_gotcha" style="display:none" />
