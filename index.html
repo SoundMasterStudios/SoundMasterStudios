@@ -76,13 +76,13 @@
               <a href="https://demos.creative-tim.com/blk-design-system/docs/1.0/getting-started/overview.html" class="dropdown-item">
                 <i class="tim-icons icon-paper"></i> Documentation
               </a>
-              <a href="examples/register-page.html" class="dropdown-item">
+              <a href="pages/thankyou.html" class="dropdown-item">
                 <i class="tim-icons icon-bullet-list-67"></i>Register Page
               </a>
-              <a href="examples/landing-page.html" class="dropdown-item">
+              <a href="pages/landing-page.html" class="dropdown-item">
                 <i class="tim-icons icon-image-02"></i>Landing Page
               </a>
-              <a href="examples/profile-page.html" class="dropdown-item">
+              <a href="pages/profile-page.html" class="dropdown-item">
                 <i class="tim-icons icon-single-02"></i>Profile Page
               </a>
             </div>
@@ -107,8 +107,8 @@
       <div class="squares square6"></div>
       <div class="squares square7"></div>
       <div class="container">
-        <div class="content-center brand">
-          <h1 class="h1-seo">SoundMaster Studios</h1>
+        <div class="content-center brand"> <!-- was content-center brand -->
+          <h1 class="h1-seo">SoundMaster Studios</h1> <!-- was h1-seo-->
           <h3>Audio Mastering Specialists</h3>
         </div>
       </div>
@@ -1101,7 +1101,7 @@
               <div class="card card-register">
                 <div class="card-header">
                   <img class="card-img" src="assets/img/square1.png" alt="Card image">
-                  <h4 class="card-title">Register</h4>
+                  <h4 class="card-title">Contact</h4>
                 </div>
                 <div class="card-body">
                   <form class="form">
@@ -1142,6 +1142,31 @@
                 <div class="card-footer">
                   <a href="javascript:void(0)" class="btn btn-info btn-round btn-lg">Get Started</a>
                 </div>
+                <form role="form" action="http://formspree.io/your@mail.com">
+                  <input type="hidden" name="_next" value="//site.io/thanks.html" />
+                  <input type="hidden" name="_subject" value="New submission!" />
+                  <input type="text" name="_gotcha" style="display:none" />
+        
+                  <div class="form-group">
+                    <label for="InputName">Your Name</label>
+                    <input type="text" class="form-control" name="name" id="InputName" placeholder="Enter Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="InputEmail">Your Email</label>
+        
+                    <input type="email" class="form-control" id="InputEmail" name="_replyto" placeholder="Enter Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="InputMessage">Message</label>
+        
+                    <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="InputReal">What is 4+3? (Simple Spam Checker)</label>
+                    <input type="text" class="form-control" name="InputReal" id="InputReal" required>
+                  </div>
+                  <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right"> 
+              </form>
               </div>
             </div>
           </div>
